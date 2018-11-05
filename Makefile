@@ -6,7 +6,7 @@
 #    By: obamzuro <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/20 11:09:03 by obamzuro          #+#    #+#              #
-#    Updated: 2018/11/05 14:31:05 by obamzuro         ###   ########.fr        #
+#    Updated: 2018/11/05 14:34:30 by obamzuro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,8 +39,8 @@ $(NAME): $(OBJ) libft/libft.a ftprintf/libftprintf.a
 clean:
 	make -C libft clean
 	make -C ftprintf clean
-	rm -f $(OBJECT)
-	find . -name ".*.sw[kopn]" -exec rm -rf {} \;
+	rm -f $(OBJ)
+	find . -name ".*.sw[kopn]" -o -name "*.o" -exec rm -rf {} \;
 
 fclean: clean
 	make -C libft fclean
